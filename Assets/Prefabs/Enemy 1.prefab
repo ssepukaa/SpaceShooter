@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8577927250455907749}
   - component: {fileID: 5143518924503441462}
   - component: {fileID: 3836127800206225163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -134,7 +134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979cc48a365dc7f42a768d91c670bf72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  shotCounter: 0
+  minTimeBetweenShots: 2
+  maxTimeBetweenShots: 5
+  laserEnemy: {fileID: 5965869653884531979, guid: f25078fac62b14c459ed77673480cd3e,
+    type: 3}
+  projectileSpeed: 10
+  health: 200
 --- !u!61 &3836127800206225163
 BoxCollider2D:
   m_ObjectHideFlags: 0

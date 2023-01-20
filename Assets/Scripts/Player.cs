@@ -6,11 +6,17 @@ namespace Assets.Scripts
 {
     public class Player : MonoBehaviour
     {
+        [Header("Movement")]
         [SerializeField] private float moveSpeed = 7f;
         [SerializeField] private float padding = 0.5f;
+
+        [Header("Projectile")]
         [SerializeField] private GameObject laserPlayer;
         [SerializeField] private float projectileSpeed = 20f;
         [SerializeField] private float projectileFiringPeriod = 0.3f;
+
+        [Header("Stats")]
+        [SerializeField] private float health = 500f;
 
         private Coroutine firingCoroutine;
 
@@ -18,6 +24,7 @@ namespace Assets.Scripts
         private float xMax;
         private float yMin;
         private float yMax;
+        
 
         void Start()
         {
@@ -75,6 +82,21 @@ namespace Assets.Scripts
             xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
             yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
             yMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 1, 0)).y - padding;
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+            health -= damageDealer.GetDamage();
+            CheckHealth();
+
+        }
+        private void CheckHealth()
+        {
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

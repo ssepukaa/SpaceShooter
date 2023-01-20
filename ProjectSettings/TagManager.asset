@@ -21,8 +21,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -71,4 +71,7 @@ TagManager:
     locked: 0
   - name: VFX
     uniqueID: 738997965
+    locked: 0
+  - name: Enemy Projectile
+    uniqueID: 2252747801
     locked: 0
