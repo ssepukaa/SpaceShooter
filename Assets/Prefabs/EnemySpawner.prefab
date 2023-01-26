@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3947374993825881214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3947374993825881208}
+  - component: {fileID: 3947374993825881215}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3947374993825881208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3947374993825881214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3947374993825881215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3947374993825881214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41cf52edca0e6d746bfd89f61e5f1f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveConfigs:
+  - {fileID: 11400000, guid: d418df4869bbe4b428a673c303437604, type: 2}
+  - {fileID: 11400000, guid: e2b2a725ae1e10f4fb5855cb999492c8, type: 2}
+  - {fileID: 11400000, guid: a94a201e40b760a45bb3d35d0d0ba804, type: 2}
+  - {fileID: 11400000, guid: 0f3660e958b59b546b8341848b668b33, type: 2}
+  - {fileID: 11400000, guid: 78c3610cb2e62f740901246dc2e8bf77, type: 2}
+  - {fileID: 11400000, guid: bf9beb640713ae84b8af31454caa1a1a, type: 2}
+  - {fileID: 11400000, guid: 433fbbb79fa989342a28b78765262025, type: 2}
+  - {fileID: 11400000, guid: b57e8d00293a2cb4ab5e057c0c6720e6, type: 2}
+  - {fileID: 11400000, guid: db5ec26ee672e0a4aa44b7289736da77, type: 2}
+  - {fileID: 11400000, guid: 3e842a62a00bf884c885d265194c3d22, type: 2}
+  - {fileID: 11400000, guid: ce5dd2f72fe99fa42ab0d57ef71fd84b, type: 2}
+  startingWave: 0
+  loopingWaves: 1

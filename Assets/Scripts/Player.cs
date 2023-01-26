@@ -16,7 +16,15 @@ namespace Assets.Scripts
         [SerializeField] private float projectileFiringPeriod = 0.3f;
 
         [Header("Stats")]
-        [SerializeField] private float health = 500f;
+        [SerializeField] private int health = 500;
+
+        [Header("SFX?VFX")]
+        [SerializeField] private GameObject deathVFX;
+        [SerializeField][Range(0, 1)] private float deathSoundVolume = 0.75f;
+        [SerializeField][Range(0, 1)] private float fireSoundVolume = 0.75f;
+
+        [SerializeField] private AudioClip deathSound;
+        [SerializeField] private AudioClip fireSound;
 
         private Coroutine firingCoroutine;
 
@@ -24,11 +32,13 @@ namespace Assets.Scripts
         private float xMax;
         private float yMin;
         private float yMax;
-        
+        [SerializeField] private float durationDeathVFX = 1f;
+
 
         void Start()
         {
             SetUpMoveBoundaries();
+            Fire();
         }
 
 
@@ -36,33 +46,35 @@ namespace Assets.Scripts
         void Update()
         {
             Move();
-            Fire();
+            //Fire();
         }
 
         private void Fire()
         {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                firingCoroutine = StartCoroutine(FireContinue());
-            }
-
-            if (Input.GetButtonUp("Fire1"))
-            {
-                StopCoroutine(firingCoroutine);
-            }
+            StartCoroutine(FireContinue());
+            // if (Input.GetButtonDown("Fire1"))
+            // {
+            //     firingCoroutine = StartCoroutine(FireContinue());
+            // }
+            //
+            // if (Input.GetButtonUp("Fire1"))
+            // {
+            //     StopCoroutine(firingCoroutine);
+            // }
         }
 
         IEnumerator FireContinue()
         {
-            while (true)
-            {
+             while (true)
+             {
                 GameObject laser = Instantiate(laserPlayer,
                         transform.position,
                         Quaternion.identity)
                     as GameObject;
                 laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+                AudioSource.PlayClipAtPoint(fireSound,laser.transform.position, fireSoundVolume);
                 yield return new WaitForSeconds(projectileFiringPeriod);
-            }
+             }
         }
 
         private void Move()
@@ -87,16 +99,46 @@ namespace Assets.Scripts
         private void OnTriggerEnter2D(Collider2D other)
         {
             DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
-            health -= damageDealer.GetDamage();
-            CheckHealth();
-
+            if (!damageDealer) { return; }
+            ProcessHit(damageDealer);
         }
+
+        private void ProcessHit(DamageDealer damageDealer)
+        {
+            health -= damageDealer.GetDamage();
+            damageDealer.Hit();
+            CheckHealth();
+        }
+
         private void CheckHealth()
         {
             if (health <= 0)
             {
-                Destroy(gameObject);
+                Die();
             }
         }
+
+        private void Die()
+        {
+
+            FindObjectOfType<Level>().LoadGameOver();
+            Destroy(gameObject);
+            GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
+            Destroy(explosion, durationDeathVFX);
+            AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
+            
+
+        }
+
+        public int GetHealth()
+        {
+            if (health <= 0)
+            {
+                health = 0;
+            }
+            return health;
+        }
+
+       
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1178727984063750587}
   - component: {fileID: 4342939662053644824}
   - component: {fileID: 1231763742504874096}
+  - component: {fileID: -5117303219836359071}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -134,13 +135,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979cc48a365dc7f42a768d91c670bf72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  shotCounter: 0
-  minTimeBetweenShots: 2
-  maxTimeBetweenShots: 5
+  minTimeBetweenShots: 0
+  maxTimeBetweenShots: 4
   laserEnemy: {fileID: 5965869653884531979, guid: f25078fac62b14c459ed77673480cd3e,
     type: 3}
   projectileSpeed: 10
+  health: 100
+  scoreValue: 10
+  deathVFX: {fileID: 1981774452263784, guid: 69bc9de1566254e4db3ef4d734a7fbcd, type: 3}
+  durationExplosion: 1
+  deathSound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
+  fireSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+  deathSoundVolume: 0.3
+  fireSoundVolume: 0.75
 --- !u!61 &1231763742504874096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,7 +158,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -167,3 +174,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.024, y: 1.024}
   m_EdgeRadius: 0
+--- !u!114 &-5117303219836359071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742177555478634542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737312232928f8141b00bab279644b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100

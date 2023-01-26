@@ -19672,7 +19672,13 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 20
   projectileFiringPeriod: 0.3
-  health: 500
+  health: 300
+  deathVFX: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b, type: 3}
+  deathSoundVolume: 0.75
+  fireSoundVolume: 0.75
+  deathSound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
+  fireSound: {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
+  durationDeathVFX: 1
 --- !u!61 &-8331333626144876488
 BoxCollider2D:
   m_ObjectHideFlags: 0
