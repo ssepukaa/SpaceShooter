@@ -676,6 +676,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 3140523757515284652, guid: 92568f2279fda5e47b4360abb7698fed,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92568f2279fda5e47b4360abb7698fed, type: 3}
 --- !u!1001 &3947374995097982628
@@ -745,6 +750,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 3947374993825881215, guid: 003af49b7e4e6124bbb810ba1d1c0a5e,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e2b2a725ae1e10f4fb5855cb999492c8,
+        type: 2}
+    - target: {fileID: 3947374993825881215, guid: 003af49b7e4e6124bbb810ba1d1c0a5e,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a94a201e40b760a45bb3d35d0d0ba804,
+        type: 2}
+    - target: {fileID: 3947374993825881215, guid: 003af49b7e4e6124bbb810ba1d1c0a5e,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d418df4869bbe4b428a673c303437604,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 003af49b7e4e6124bbb810ba1d1c0a5e, type: 3}
 --- !u!1001 &6798192562840736238

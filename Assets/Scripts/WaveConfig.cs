@@ -7,7 +7,8 @@ namespace Assets.Scripts
     public class WaveConfig : ScriptableObject
     {
         [SerializeField] private GameObject enemyPrefab;
-        [SerializeField] private GameObject pathPrefab;
+        [SerializeField] private List<GameObject> pathPrefabs;
+        //[SerializeField] private GameObject pathPrefab;
         [SerializeField] private float timeBetweenSpawns = 0.5f;
         [SerializeField] private float spawnRandomFactor = 0.3f;
         [SerializeField] private int numberOfEnemy = 5;
@@ -18,7 +19,7 @@ namespace Assets.Scripts
         public List<Transform> GetWaypoints()
         {
             var waypointsList = new List<Transform>();
-            foreach (Transform child in pathPrefab.transform)
+            foreach (Transform child in pathPrefabs[Random.Range(0,pathPrefabs.Count)].transform)
             {
                 waypointsList.Add(child);
             }

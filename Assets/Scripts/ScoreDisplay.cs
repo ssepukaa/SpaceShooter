@@ -1,21 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ScoreDisplay : MonoBehaviour
+namespace Assets.Scripts
 {
-    private TextMeshProUGUI scoreText;
-    private GameSession gameSession;
-    void Start()
+    public class ScoreDisplay : MonoBehaviour
     {
-        scoreText = GetComponent<TextMeshProUGUI>();
-        gameSession = FindObjectOfType<GameSession>();
-    }
+        private TextMeshProUGUI scoreText;
+        private GameSession gameSession;
+        void Start()
+        {
+            scoreText = GetComponent<TextMeshProUGUI>();
+            gameSession = FindObjectOfType<GameSession>();
+        }
 
-    void Update()
-    {
-        scoreText.text = gameSession.GetScore().ToString();
+        void Update()
+        {
+            scoreText.text = gameSession.GetScore().ToString();
+        }
     }
 }

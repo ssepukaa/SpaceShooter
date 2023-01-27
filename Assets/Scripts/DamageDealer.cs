@@ -1,20 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageDealer : MonoBehaviour
+namespace Assets.Scripts
 {
-    [SerializeField] private int damage = 100;
-
-    public int GetDamage()
+    public class DamageDealer : MonoBehaviour
     {
-        return damage;
-    }
+        [SerializeField] private int damage = 100;
 
-    public void Hit()    
-    {
-        Destroy(gameObject);
-    }
+        public int GetDamage()
+        {
+            return damage;
+        }
 
+        public void Hit()    
+        {
+            Destroy(gameObject);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            if (collider.gameObject.tag == "Projectile" && gameObject.tag == "Projectile")
+            {
+                Hit();
+            }
+        
+        }
     
+    }
 }

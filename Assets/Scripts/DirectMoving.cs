@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Space_Shooter_Template_FREE.Scripts
+namespace Assets.Scripts
 {
     /// <summary>
     /// This script moves the attached object along the Y-axis with the defined speed

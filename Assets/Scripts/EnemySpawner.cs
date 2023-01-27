@@ -13,8 +13,11 @@ namespace Assets.Scripts
         [SerializeField] private int startingWave=0;
         [SerializeField] private bool loopingWaves = false;
 
+        private GameSession gameSession;
+
         IEnumerator Start()
         {
+            gameSession = FindObjectOfType<GameSession>();
             do
             {
                 yield return StartCoroutine(SpawnAllWaves());
@@ -28,6 +31,7 @@ namespace Assets.Scripts
             {
                 var currentWay = waveConfigs[waveIndex];
                 yield return StartCoroutine(SpawnAllEnemiesInWave(currentWay));
+                gameSession.AddNumberWaves();
             }
 
             

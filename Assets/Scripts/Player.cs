@@ -139,6 +139,12 @@ namespace Assets.Scripts
             return health;
         }
 
+        public void SubProjectileFiringPeriod()
+        {
+            if (projectileFiringPeriod <= 0.08) return;
+            projectileFiringPeriod -= 0.02f;
+        }
+
        
     }
 }
