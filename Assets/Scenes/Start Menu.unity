@@ -201,6 +201,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1967310934847896435, guid: 222ede035aaa67942ac908121f99f6e5,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.148
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967310934847896435, guid: 222ede035aaa67942ac908121f99f6e5,
+        type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: e143576835ae3b64e979ae15f7069011, type: 3}
@@ -1348,9 +1353,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ff01bf1ebf91940950eb69a220072f, type: 3}
+--- !u!1 &2353352200616394701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8567807501774669319, guid: 68ff01bf1ebf91940950eb69a220072f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2353352200616394700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6218977253450807759 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8567807501774669315, guid: 68ff01bf1ebf91940950eb69a220072f,
     type: 3}
   m_PrefabInstance: {fileID: 2353352200616394700}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6218977253450807760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353352200616394701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c36e8945f23fe4abb321f9c7654910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

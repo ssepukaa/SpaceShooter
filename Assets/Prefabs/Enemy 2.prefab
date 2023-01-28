@@ -140,7 +140,7 @@ MonoBehaviour:
   laserEnemy: {fileID: 5965869653884531979, guid: 74dfb3102f4b1874c8eec3a5b50d1138,
     type: 3}
   projectileSpeed: 4
-  health: 500
+  health: 1000
   scoreValue: 50
   deathVFX: {fileID: 1981774452263784, guid: 69bc9de1566254e4db3ef4d734a7fbcd, type: 3}
   durationExplosion: 1

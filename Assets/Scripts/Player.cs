@@ -9,31 +9,32 @@ namespace Assets.Scripts
         [Header("Movement")]
         [SerializeField] private float moveSpeed = 7f;
         [SerializeField] private float padding = 0.5f;
+        private float xMin;
+        private float xMax;
+        private float yMin;
+        private float yMax;
 
         [Header("Projectile")]
         [SerializeField] private GameObject laserPlayer;
         [SerializeField] private float projectileSpeed = 20f;
         [SerializeField] private float projectileFiringPeriod = 0.3f;
+        private Coroutine firingCoroutine;
 
         [Header("Stats")]
         [SerializeField] private int health = 500;
 
-        [Header("SFX?VFX")]
+        [Header("SFX/VFX")]
         [SerializeField] private GameObject deathVFX;
+        [SerializeField] private GameObject hitVFX;
+        [SerializeField] private GameObject healingVFX;
         [SerializeField][Range(0, 1)] private float deathSoundVolume = 0.75f;
         [SerializeField][Range(0, 1)] private float fireSoundVolume = 0.75f;
+        [SerializeField] private float durationDeathVFX = 1f;
 
         [SerializeField] private AudioClip deathSound;
         [SerializeField] private AudioClip fireSound;
-
-        private Coroutine firingCoroutine;
-
-        private float xMin;
-        private float xMax;
-        private float yMin;
-        private float yMax;
-        [SerializeField] private float durationDeathVFX = 1f;
-
+        [SerializeField] private AudioClip hitbyShipSound;
+        [SerializeField] private AudioClip prefHealingAudio;
 
         void Start()
         {
@@ -107,6 +108,8 @@ namespace Assets.Scripts
         {
             health -= damageDealer.GetDamage();
             damageDealer.Hit();
+            AudioSource.PlayClipAtPoint(hitbyShipSound, transform.position);
+            Instantiate(hitVFX, damageDealer.transform.position, damageDealer.transform.rotation);
             CheckHealth();
         }
 
@@ -145,6 +148,12 @@ namespace Assets.Scripts
             projectileFiringPeriod -= 0.02f;
         }
 
+        public void AddHealth(int amountHealth)
+        {
+            health += amountHealth;
+            AudioSource.PlayClipAtPoint(prefHealingAudio, transform.position);
+           
+        }
        
     }
 }

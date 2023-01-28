@@ -4851,7 +4851,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 738997965
-  m_SortingLayer: 7
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -9734,7 +9734,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 738997965
-  m_SortingLayer: 7
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -14617,7 +14617,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 738997965
-  m_SortingLayer: 7
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -19499,7 +19499,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 738997965
-  m_SortingLayer: 7
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -19673,12 +19673,15 @@ MonoBehaviour:
   projectileSpeed: 20
   projectileFiringPeriod: 0.3
   health: 300
-  deathVFX: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b, type: 3}
+  deathVFX: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
+  hitVFX: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
   deathSoundVolume: 0.75
   fireSoundVolume: 0.75
+  durationDeathVFX: 1
   deathSound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   fireSound: {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
-  durationDeathVFX: 1
+  hitbyShipSound: {fileID: 8300000, guid: ab297b593498a6e47ba84de770477cbe, type: 3}
+  prefHealingAudio: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
 --- !u!61 &-8331333626144876488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24335,7 +24338,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 738997965
-  m_SortingLayer: 7
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8046989395426165041}
   - component: {fileID: -2925592373584220786}
   - component: {fileID: -1033098512748294074}
+  - component: {fileID: -967373485716582098}
   m_Layer: 8
   m_Name: PlayerLaser
   m_TagString: Projectile
@@ -147,3 +148,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+--- !u!114 &-967373485716582098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5965869653884531979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69dcaf521609a1b408a38dbd35664e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefDeathVFX: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96,
+    type: 3}
+  prefDeathSFX: {fileID: 8300000, guid: a245ee5d75348c84a89ffb7992f1dc82, type: 3}

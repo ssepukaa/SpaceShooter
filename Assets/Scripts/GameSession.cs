@@ -7,8 +7,12 @@ namespace Assets.Scripts
     {
         [SerializeField] private GameObject prefEnemySpawner;
         private int score = 0;
+        
+        private int scoreTemp = 2;
         private int numberWaves = 0;
         private int recordScore;
+        private int amountHealth = 100;
+        private bool isMute;
 
 
         private void  Awake()
@@ -49,6 +53,16 @@ namespace Assets.Scripts
                 PlayerPrefs.SetInt("RecordScore", recordScore);
                 PlayerPrefs.Save();
             }
+
+            if (scoreTemp - (score / 1000) == 1)
+            {
+                scoreTemp += 1;
+                Player player = FindObjectOfType<Player>();
+                if (player != null)
+                {
+                    player.AddHealth(amountHealth);
+                }
+            }
        
         }
 
@@ -60,7 +74,7 @@ namespace Assets.Scripts
         public void AddNumberWaves()
         {
             numberWaves++;
-            if (numberWaves % 1 == 0)
+            if (numberWaves % 10 == 0)
             {
                 CreateNewEnemySpawner();
             }
@@ -78,7 +92,12 @@ namespace Assets.Scripts
                 directMovingObject.speed -= 0.1f;
             }
 
-            FindObjectOfType<Player>().SubProjectileFiringPeriod();
+            Player player = FindObjectOfType<Player>();
+            if (player != null)
+            {
+                player.SubProjectileFiringPeriod();
+            }
+               
         }
     }
 }

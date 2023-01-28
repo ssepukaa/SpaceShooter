@@ -11,9 +11,14 @@ namespace Assets.Scripts
             return damage;
         }
 
-        public void Hit()    
+        public void Hit()
         {
             Destroy(gameObject);
+            PrefabsProjectiles prefabsProjectiles = GetComponent<PrefabsProjectiles>();
+            if (prefabsProjectiles != null)
+            {
+                prefabsProjectiles.InstantiateDeathVFXandSFX();
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D collider)
