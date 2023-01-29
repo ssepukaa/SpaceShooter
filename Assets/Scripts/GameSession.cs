@@ -13,6 +13,7 @@ namespace Assets.Scripts
         private int recordScore;
         private int amountHealth = 100;
         private bool isMute;
+        private int levelCount = 1;
 
 
         private void  Awake()
@@ -86,6 +87,7 @@ namespace Assets.Scripts
         {
             
             Instantiate(prefEnemySpawner);
+            SetLevelCount();
 
             var directMovingObjects = FindObjectsOfType<DirectMoving>();
             foreach (DirectMoving directMovingObject in directMovingObjects)
@@ -99,6 +101,16 @@ namespace Assets.Scripts
                 player.SubProjectileFiringPeriod();
             }
                
+        }
+
+        public int GetLevelCount()
+        {
+            return levelCount;
+        }
+
+        private void SetLevelCount()
+        {
+            levelCount++;
         }
     }
 }

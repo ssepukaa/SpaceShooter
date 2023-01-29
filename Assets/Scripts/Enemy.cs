@@ -22,13 +22,14 @@ namespace Assets.Scripts
         [SerializeField] private float durationExplosion =1f;
         [SerializeField] private AudioClip deathSound;
         [SerializeField] private AudioClip fireSound;
-        [SerializeField] [Range(0, 1)] private float deathSoundVolume = 0.75f;
+        private float deathSoundVolume = 0.75f;
         [SerializeField] [Range(0, 1)] private float fireSoundVolume = 0.75f;
+        private AudioSource audioSource;
 
         void Start()
         {
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
-
+            audioSource = GetComponent<AudioSource>();
         }
 
    
@@ -84,11 +85,18 @@ namespace Assets.Scripts
 
         private void Die()
         {
-            FindObjectOfType<GameSession>().AddToScore(scoreValue);  
+            FindObjectOfType<GameSession>().AddToScore(scoreValue);
+            
+            audioSource.clip = deathSound;
+            audioSource.pitch = Random.Range(0.6f, 1f);
+            //audioSource.volume =  Random.Range(0.6f, 1f);
+            AudioSource.PlayClipAtPoint(deathSound, transform.position, Random.Range(0.3f, 1f)); 
+
             Destroy(gameObject);
             GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
             Destroy(explosion, durationExplosion);
-            AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
+            
+            
 
         }
     }

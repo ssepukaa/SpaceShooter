@@ -518,6 +518,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 2979812978115413472, guid: 92568f2279fda5e47b4360abb7698fed,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.69
+      objectReference: {fileID: 0}
     - target: {fileID: 3140523757515284652, guid: 92568f2279fda5e47b4360abb7698fed,
         type: 3}
       propertyPath: simulationSpeed
