@@ -19576,6 +19576,7 @@ GameObject:
   - component: {fileID: 976429482707850729}
   - component: {fileID: 976429482707850728}
   - component: {fileID: -8331333626144876488}
+  - component: {fileID: -1921463867099335219}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -19675,6 +19676,7 @@ MonoBehaviour:
   health: 300
   deathVFX: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
   hitVFX: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
+  healingVFX: {fileID: 0}
   deathSoundVolume: 0.75
   fireSoundVolume: 0.75
   durationDeathVFX: 1
@@ -19708,6 +19710,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9116197, y: 1.6962829}
   m_EdgeRadius: 0
+--- !u!114 &-1921463867099335219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115501049309392571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74420509ddcba44a803438e08431b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.15
 --- !u!1 &1115661080489515747
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7766397980886946678}
   - component: {fileID: 1178727984063750587}
   - component: {fileID: 4342939662053644824}
-  - component: {fileID: 1231763742504874096}
   - component: {fileID: -5117303219836359071}
+  - component: {fileID: 8111097350657938651}
   m_Layer: 7
   m_Name: Enemy 2
   m_TagString: Enemy
@@ -135,45 +135,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979cc48a365dc7f42a768d91c670bf72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 5
+  minTimeBetweenShots: 1
+  maxTimeBetweenShots: 10
   laserEnemy: {fileID: 5965869653884531979, guid: 74dfb3102f4b1874c8eec3a5b50d1138,
     type: 3}
   projectileSpeed: 4
   health: 1000
-  scoreValue: 50
+  scoreValue: 300
   deathVFX: {fileID: 1981774452263784, guid: 69bc9de1566254e4db3ef4d734a7fbcd, type: 3}
   durationExplosion: 1
   deathSound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   fireSound: {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
   deathSoundVolume: 0.3
   fireSoundVolume: 0.75
---- !u!61 &1231763742504874096
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7742177555478634542}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.034740448, y: -0.32134926}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 1.2047058, y: 1.2047058}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.4210958, y: 3.612169}
-  m_EdgeRadius: 0
 --- !u!114 &-5117303219836359071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,3 +161,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+--- !u!68 &8111097350657938651
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742177555478634542}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.5472709, y: -0.3647743}
+  - {x: 1.7620616, y: -0.022493362}
+  - {x: 1.7695293, y: 0.60499513}
+  - {x: 1.4881673, y: 0.95872486}
+  - {x: 0.90263337, y: 0.9660765}
+  - {x: 0.86270076, y: 1.527113}
+  - {x: -0.7764225, y: 1.5365609}
+  - {x: -0.8395687, y: 0.9549972}
+  - {x: -1.2821002, y: 0.95448816}
+  - {x: -1.668536, y: 0.6725248}
+  - {x: -1.7080753, y: 0.10422194}
+  - {x: -1.377774, y: -0.3078956}
+  - {x: -1.3755082, y: -0.6660635}
+  - {x: -0.960735, y: -0.66249496}
+  - {x: -0.63107026, y: -0.6612242}
+  - {x: -0.19623083, y: -2.211642}
+  - {x: 0.2549716, y: -2.2086768}
+  - {x: 0.8265338, y: -0.6960446}
+  - {x: 1.3137534, y: -0.6953833}
+  - {x: 1.5744396, y: -0.7124481}
+  - {x: 1.5570693, y: -0.7124484}
+  - {x: 1.562006, y: -0.33003563}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

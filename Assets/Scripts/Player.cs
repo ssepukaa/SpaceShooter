@@ -73,7 +73,7 @@ namespace Assets.Scripts
                         Quaternion.identity)
                     as GameObject;
                 laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
-                AudioSource.PlayClipAtPoint(fireSound,laser.transform.position, fireSoundVolume);
+                //AudioSource.PlayClipAtPoint(fireSound,laser.transform.position, fireSoundVolume);
                 yield return new WaitForSeconds(projectileFiringPeriod);
              }
         }

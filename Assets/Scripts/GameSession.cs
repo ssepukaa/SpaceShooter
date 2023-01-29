@@ -19,6 +19,7 @@ namespace Assets.Scripts
         {
             SetUpSingleton();
             recordScore = PlayerPrefs.GetInt("RecordScore");
+            Application.targetFrameRate = 50;
         }
 
         private void SetUpSingleton()
