@@ -130,6 +130,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4473476402851153650, guid: 483968641c5df104282d8d470501de5f,
+        type: 3}
+      propertyPath: m_margin.w
+      value: -43.1541
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473476402851153650, guid: 483968641c5df104282d8d470501de5f,
+        type: 3}
+      propertyPath: m_margin.y
+      value: -97.31303
+      objectReference: {fileID: 0}
     - target: {fileID: 6218977252361159568, guid: 483968641c5df104282d8d470501de5f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -239,6 +249,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Game Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452579309942928976, guid: 483968641c5df104282d8d470501de5f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452579309942928976, guid: 483968641c5df104282d8d470501de5f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -221.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452579309942928976, guid: 483968641c5df104282d8d470501de5f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -232
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 483968641c5df104282d8d470501de5f, type: 3}
